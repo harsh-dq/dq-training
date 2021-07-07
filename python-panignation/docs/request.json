@@ -1,0 +1,22 @@
+{
+    "email": "man@123.com",
+    "firstname": "man",
+    "lastname": "man",
+    "comments": "hello there"
+}
+
+
+
+
+Curl Request Post 
+
+
+curl -X POST -H "Content-Type: application/json" \
+    -d '{
+        "email": "man@123.com",
+        "firstname": "man",
+        "lastname": "man",
+        "comments": "hello there"
+    }
+    ' \
+    http://0.0.0.0:8080/

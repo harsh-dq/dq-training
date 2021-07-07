@@ -1,0 +1,46 @@
+version: '3.3'
+
+
+networks:
+  py-net:
+    driver: bridge
+
+services:
+  # py-app:
+  #   build: ./
+  #   # volumes:
+  #   #   - ./:/app
+  #   depends_on: 
+  #     - db
+  #   restart: always
+  #   ports:
+  #     - 8090:8080
+  #   environment:
+  #     - DATABASE_URL=postgres://root:KSdh7qtSZj@postgress_db:5432/pythondb
+  #   networks:
+  #      - py-net
+
+  db:
+    container_name: postgress_db
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: KSdh7qtSZj
+      POSTGRES_DB: pythondb
+    ports:
+      - "5432:5432"
+    networks:
+      - py-net     
+
+  pgadmin:
+    container_name: pg_admin4
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: hasharma@deqode.com
+      PGADMIN_DEFAULT_PASSWORD: KSdh7qtSZj
+    ports:
+      - "5050:80"
+    networks:
+       - py-net
