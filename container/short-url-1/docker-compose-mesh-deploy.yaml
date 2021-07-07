@@ -1,0 +1,71 @@
+# Use root/example as user/password credentials
+version: '3.1'
+
+
+networks:
+  appnet:
+
+services:
+  app:
+    image: node-url-shortner:v1
+    # build: ./
+    # volumes:
+    #   - ./:/var/www/app
+    links:
+      - redis
+      - mongodb
+    depends_on: 
+      - mongodb
+    restart: always
+    ports:
+      - 80:5000
+    environment:
+      - MONGODB_URI=mongodb://mongodb/slashurl
+      - REDIS_URL=redis
+      - REDIS_PORT=6379
+    networks:
+       - appnet
+    deploy:
+      replicas: 2
+      update_config:
+        parallelism: 2
+        delay: 10s
+      restart_policy:
+        condition: on-failure
+
+
+  mongodb:
+    image: mongo
+    restart: always
+    restart: always
+    container_name: mongodb
+    ports: 
+      - 27017:27017
+    # volumes:
+    #   - './dbdata:/data/db'
+    networks:
+        - appnet
+    deploy:
+      replicas: 1
+      update_config:
+        parallelism: 2
+        delay: 10s
+      restart_policy:
+        condition: on-failure
+
+
+  redis:
+    image: redis
+    restart: always
+    container_name: redis
+    ports:
+      - 6379:6379
+    deploy:
+      replicas: 4
+      update_config:
+        parallelism: 2
+        delay: 10s
+      restart_policy:
+        condition: on-failure
+    networks:
+      - appnet
