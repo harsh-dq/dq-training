@@ -59,5 +59,8 @@ Create a Task Defination and Add Container
 
 
 
+Now create a ECS Cluster
+
+
 Create ALB 
 
