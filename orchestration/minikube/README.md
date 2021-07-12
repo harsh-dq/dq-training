@@ -8,6 +8,11 @@
 ```shell
  minikube start --nodes 2 -p multinode
 ```
+## To Add a node to minikube Cluster
+
+```shell 
+minikube node add
+```
 
 
 # StatefulSet
