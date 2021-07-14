@@ -24,13 +24,13 @@ pg = get_pg_connection()
 
 
 app = Flask(__name__)
-app.config["SECRET_KEY"] = os.getenv("SECRET")
-CORS(app, supports_credentials=True)
-app.config["CORS_HEADERS"] = "Content-Type"
+# app.config["SECRET_KEY"] = os.getenv("SECRET")
+# CORS(app, supports_credentials=True)
+# app.config["CORS_HEADERS"] = "Content-Type"
 
 
 @app.route("/", methods=["GET", "POST"])
-@cross_origin()
+# @cross_origin()
 def post_user_details():
     if request.method == "POST":  
         request_json = request.json
