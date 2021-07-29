@@ -29,3 +29,17 @@ a.b.c.d and its public key is provided.
 ws Blocking Error
 
 https://github.com/paritytech/polkadot/issues/842
+
+
+Reff
+https://guide.kusama.network/docs/maintain-sync/
+https://guide.kusama.network/docs/mirror-maintain-guides-how-to-validate-kusama/
+
+
+https://guide.kusama.network/docs/maintain-guides-how-to-use-polkadot-validator-setup/
+
+
+monitoring
+
+https://wiki.polkadot.network/docs/maintain-guides-how-to-monitor-your-node
+https://grafana.com/grafana/dashboards/12425
