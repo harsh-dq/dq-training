@@ -23,3 +23,9 @@ it with prometheus-operator (https://github.com/coreos/prometheus-operator). Inv
 3.- We want to make the metrics available to an external prometheus instance through a WireGuard VPN
 (https://www.wireguard.com/). Assume that the cluster's worker nodes run on ubuntu LTS and the VPN peer is on IPv4
 a.b.c.d and its public key is provided.
+
+
+
+ws Blocking Error
+
+https://github.com/paritytech/polkadot/issues/842
