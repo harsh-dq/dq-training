@@ -14,7 +14,7 @@ Useful links:
 1.- Write the application code, it should expose prometheus metrics to answer these questions:
 
 * How many validators form the active set?
-* If a concrete validator (from a provided list) didn't produce any blocks in the last 40 minutes (since the beginning of the current session), has it sent a heartbeat? Think also about when this "alert" should eventually resolve.
+* If a concrete validator (from a provided list) didn't produce any blocks in the last 40 minutes (since the beginning of the current session), has it sent a heartbeat? Think also about Vwhen this "alert" should eventually resolve.
 * Was one concrete validator (from a provided list) reported offline in the last session? 
 
 2.- Create a Helm chart for deploying it. Add as many resources as you think could be necessary for using 
@@ -33,6 +33,7 @@ https://github.com/paritytech/polkadot/issues/842
 
 Reff
 https://guide.kusama.network/docs/maintain-sync/
+
 https://guide.kusama.network/docs/mirror-maintain-guides-how-to-validate-kusama/
 
 
@@ -42,4 +43,33 @@ https://guide.kusama.network/docs/maintain-guides-how-to-use-polkadot-validator-
 monitoring
 
 https://wiki.polkadot.network/docs/maintain-guides-how-to-monitor-your-node
+
 https://grafana.com/grafana/dashboards/12425
+
+
+validators
+https://support.polkadot.network/support/solutions/articles/65000169209-what-does-active-inactive-waiting-mean-
+
+
+https://wiki.polkadot.network/docs/maintain-guides-how-to-validate-kusama
+
+
+
+
+
+
+
+Blog
+https://medium.com/luniehq/advanced-nomination-guide-for-polkadot-and-kusama-8b6129b2e27f
+
+https://mswezey.medium.com/kusama-validator-node-setup-643190a8ac7e
+
+
+
+
+
+Main
+
+https://github.com/paritytech/polkadot/blob/master/doc/docker.md
+
+https://medium.com/polkadot-network/polkadot-a-syncing-node-in-under-30s-69a0d979aa9f
