@@ -1,0 +1,33 @@
+version: '3.2'
+
+services:
+  routing:
+    build:
+      dockerfile: Dockerfile
+      context: ./routing
+    ports:
+      - 4000:2998
+    # depends_on:
+    #   - userservice
+    #   - orderservice
+    environment:
+      - USER_SREVICE_URl=http://userservice:3001
+      - ORDER_SREVICE_URl=http://orderservice:3000
+      
+  userservice:
+    build:
+        dockerfile: Dockerfile
+        context: ./user-service
+    ports:
+        - 3001:3001
+
+  orderservice:
+    build:
+        dockerfile: Dockerfile
+        context: ./order-service
+    ports:
+        - 3000:3000
+
+  
+          
+
