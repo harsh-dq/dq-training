@@ -28,7 +28,7 @@ a.b.c.d and its public key is provided.
 
 ws Blocking Error
 
-https://github.com/paritytech/polkadot/issues/842
+    https://github.com/paritytech/polkadot/issues/842
 
 
 Reff
