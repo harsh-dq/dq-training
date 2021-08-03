@@ -1,11 +1,6 @@
-function emotify(string) {
+function one(string) {
     return string + '' + ' :)'; 
    }
    
-   function anotherFunc(string) {
-    return string + '' + ' :)'; 
-   }
 
-   
-console.log(emotify('just testing User-servive'));
-console.log(anotherFunc('just testing Order-Service'));
+console.log(one('just testing User-servive'));
