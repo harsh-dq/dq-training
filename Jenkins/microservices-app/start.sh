@@ -1,9 +1,9 @@
 #! bin/bash
 docker network create app
 
-docker build -t ishu0824/routing:$1 Jenkins/microservices-app/routing/.
-docker build -t ishu0824/userservice:$1 Jenkins/microservices-app/user-service/.
-docker build -t ishu0824/orderservice:$1 Jenkins/microservices-app/user-service/.
+docker build --no-cache -t ishu0824/routing:$1 Jenkins/microservices-app/routing/.
+docker build --no-cache -t ishu0824/userservice:$1 Jenkins/microservices-app/user-service/.
+docker build --no-cache -t ishu0824/orderservice:$1 Jenkins/microservices-app/user-service/.
 
 
 docker rm -f routing userservice orderservice
