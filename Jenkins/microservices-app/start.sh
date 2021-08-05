@@ -1,9 +1,9 @@
 #! bin/bash
 docker network create app
 
-docker build -t ishu0824/routing:$1 ${pwd}/routing/.
-docker build -t ishu0824/userservice:$1 ${pwd}/user-service/.
-docker build -t ishu0824/orderservice:$1 ${pwd}/user-service/.
+docker build -t ishu0824/routing:$1 Jenkins/microservices-app/routing/.
+docker build -t ishu0824/userservice:$1 Jenkins/microservices-app/user-service/.
+docker build -t ishu0824/orderservice:$1 Jenkins/microservices-app/user-service/.
 
 
 docker run -d -p 80:80 --name --net app routing ishu0824/routing:$1
