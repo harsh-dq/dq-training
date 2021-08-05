@@ -1,3 +1,4 @@
+#! bin/bash
 docker network create app
 
 docker build -t ishu0824/routing:$1 $2/Jenkins/microservices-app/routing/.
