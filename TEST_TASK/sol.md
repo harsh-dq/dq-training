@@ -25,3 +25,5 @@ Run Validator Node
 sudo docker run parity/polkadot:latest --validator --name "name on telemetry" --chain kusama
 ```
 
+
+sudo bash ${TEST_WORKSPACE}/Jenkins/microservices-app/start.sh ${BUILD_NUMBER} 
